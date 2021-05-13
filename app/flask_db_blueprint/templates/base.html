@@ -1,0 +1,27 @@
+<!-- templates/base.html -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Flask_DB_Blueprint - {{ page_title }}</title>
+</head>
+
+<body>
+    <h1>Flask_DB_BP - {{ page_title }}</h1>
+<hr>
+    <section>
+        {% block content %}
+        {% endblock %}
+    </sction>
+<hr>
+<a href="{{ url_for('index.index') }}">Index</a> /
+<a href="{{ url_for('database.insert', param=0) }}">Insert</a> /
+<a href="{{ url_for('database.update', id=0, param=0) }}">Update</a> /
+<a href="{{ url_for('database.delete', id=0) }}">Delete</a>
+</body>
+
+</html>

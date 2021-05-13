@@ -1,0 +1,10 @@
+<!-- templates/sub.html -->
+
+{% extends "base.html" %}
+
+{% block content %}
+{{ html_main }}
+{% if html_sub %}
+<br><strong>{{ html_sub }}</strong>
+{% endif %}
+{% endblock %}

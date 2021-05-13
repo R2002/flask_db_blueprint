@@ -1,0 +1,34 @@
+{
+    "listeners": {
+        "*:8081": {
+            "application": "flask_test"
+        },
+        "*:8082": {
+            "application": "flask_db"
+        },
+        "*:8083": {
+            "application": "flask_db_blueprint"
+        },
+    },
+
+    "applications": {
+        "flask_test": {
+            "type": "python 3.6.8",
+            "path": "/usr/share/nginx/app/flask_test/",
+            "home": "/usr/share/nginx/venv/flask_test/",
+            "module": "main"
+        },
+        "flask_db": {
+            "type": "python 3.6.8",
+            "path": "/usr/share/nginx/app/flask_db/",
+            "home": "/usr/share/nginx/venv/flask_db/",
+            "module": "run"
+        },
+        "flask_db_blueprint": {
+            "type": "python 3.6.8",
+            "path": "/usr/share/nginx/app/flask_db_blueprint/",
+            "home": "/usr/share/nginx/venv/flask_db/",
+            "module": "run"
+        },
+    }
+}

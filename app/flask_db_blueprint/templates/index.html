@@ -1,0 +1,14 @@
+<!-- templates/index.html -->
+
+{% extends "base.html" %}
+
+{% block content %}
+{{ html_main }}
+{% if lists %}
+  <table border><tr><th>Id</th><th>Data</th></tr>
+  {% for list in lists %}
+    <tr><th>{{ list.id }}</th><td>{{ list.data }}</td></tr>
+  {% endfor %}
+  </table>
+{% endif %}
+{% endblock %}
